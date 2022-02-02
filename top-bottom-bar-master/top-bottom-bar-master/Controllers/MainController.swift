@@ -22,6 +22,10 @@ class MainController: UIViewController {
 //        }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         showCustomBtn()
     }
@@ -42,6 +46,8 @@ class MainController: UIViewController {
     }
     
     func setLeftTitle() {
+        
+        self.navigationItem.backButtonTitle = ""
         let logoImage = UIImage(named: "let_icon_transparent")
         let logoImageView = UIImageView.init(image: logoImage)
         
@@ -82,5 +88,23 @@ class MainController: UIViewController {
         }
     }
     
+    @IBAction func customBtnClick(_ sender: Any) {
+        let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        
+        print(self.view.frame)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+}
+
+extension UINavigationController {
+
+    public func pushViewController(_ viewController: UIViewController, animated: Bool,completion: (() -> Void)?) {
+    CATransaction.begin()
+    CATransaction.setCompletionBlock(completion)
+    pushViewController(viewController, animated: animated)
+    CATransaction.commit()
+  }
+
 }
 
