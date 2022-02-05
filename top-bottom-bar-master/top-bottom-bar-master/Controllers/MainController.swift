@@ -37,12 +37,17 @@ class MainController: UIViewController {
         burgerView.contentMode = .scaleAspectFit
         burgerView.widthAnchor.constraint(equalToConstant: 24).isActive = true
         burgerView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        burgerView.isUserInteractionEnabled = true
+        let clickEvent = UITapGestureRecognizer(target: self, action: #selector(showDrawer))
+        burgerView.addGestureRecognizer(clickEvent)
         
-        let imageItem = UIBarButtonItem.init(customView: burgerView)
+        let imageItem = UIBarButtonItem(customView: burgerView)
         let rightSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         rightSpacer.width = 16
         
+        
         self.navigationItem.rightBarButtonItems = [rightSpacer,imageItem]
+        
     }
     
     func setLeftTitle() {
@@ -63,6 +68,12 @@ class MainController: UIViewController {
         leftSpacer.width = 24
         
         navigationItem.leftBarButtonItems = [leftSpacer, imageItem]
+    }
+    
+    @objc func showDrawer() {
+        let drawerVC = DrawerViewController(nibName: "DrawerViewController", bundle: nil)
+        drawerVC.modalPresentationStyle = .overFullScreen
+        self.present(drawerVC, animated: false, completion: nil)
     }
     
     func setViewUI() {
