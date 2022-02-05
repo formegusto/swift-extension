@@ -73,6 +73,7 @@ class MainController: UIViewController {
     @objc func showDrawer() {
         let drawerVC = DrawerViewController(nibName: "DrawerViewController", bundle: nil)
         drawerVC.modalPresentationStyle = .overFullScreen
+        drawerVC.superNavigationController = self.navigationController
         self.present(drawerVC, animated: false, completion: nil)
     }
     

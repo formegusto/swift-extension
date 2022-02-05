@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D8E8F2627AE39A400F84C2C /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E8F2427AE39A400F84C2C /* DrawerViewController.swift */; };
 		8D8E8F2727AE39A400F84C2C /* DrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E8F2527AE39A400F84C2C /* DrawerViewController.xib */; };
+		8D8E8F2A27AE46BB00F84C2C /* DrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E8F2827AE46BB00F84C2C /* DrawerTableViewCell.swift */; };
+		8D8E8F2B27AE46BB00F84C2C /* DrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E8F2927AE46BB00F84C2C /* DrawerTableViewCell.xib */; };
 		8D91ADF927A970CE00CDEA92 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91ADF727A970CE00CDEA92 /* DetailViewController.swift */; };
 		8D91ADFA27A970CE00CDEA92 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D91ADF827A970CE00CDEA92 /* DetailViewController.xib */; };
 		8DDDDD8527A6E1AB00040903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDDDD8427A6E1AB00040903 /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		8D8E8F2427AE39A400F84C2C /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		8D8E8F2527AE39A400F84C2C /* DrawerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerViewController.xib; sourceTree = "<group>"; };
+		8D8E8F2827AE46BB00F84C2C /* DrawerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTableViewCell.swift; sourceTree = "<group>"; };
+		8D8E8F2927AE46BB00F84C2C /* DrawerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerTableViewCell.xib; sourceTree = "<group>"; };
 		8D91ADF727A970CE00CDEA92 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8D91ADF827A970CE00CDEA92 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../Controllers/DetailViewController.xib; sourceTree = "<group>"; };
 		8DDDDD8127A6E1AB00040903 /* top-bottom-bar-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "top-bottom-bar-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,8 @@
 		8DDDDD9927A6E24000040903 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D8E8F2827AE46BB00F84C2C /* DrawerTableViewCell.swift */,
+				8D8E8F2927AE46BB00F84C2C /* DrawerTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				8DDDDDA427A6F0B300040903 /* burger.png in Resources */,
 				8DDDDD8E27A6E1AC00040903 /* Assets.xcassets in Resources */,
 				8D8E8F2727AE39A400F84C2C /* DrawerViewController.xib in Resources */,
+				8D8E8F2B27AE46BB00F84C2C /* DrawerTableViewCell.xib in Resources */,
 				8DDDDDA227A6ECCD00040903 /* let_icon_transparent.png in Resources */,
 				8DDDDD8C27A6E1AB00040903 /* Main.storyboard in Resources */,
 			);
@@ -206,6 +213,7 @@
 			files = (
 				8DDDDD8927A6E1AB00040903 /* MainController.swift in Sources */,
 				8DDDDD8527A6E1AB00040903 /* AppDelegate.swift in Sources */,
+				8D8E8F2A27AE46BB00F84C2C /* DrawerTableViewCell.swift in Sources */,
 				8D8E8F2627AE39A400F84C2C /* DrawerViewController.swift in Sources */,
 				8DDDDD8727A6E1AB00040903 /* SceneDelegate.swift in Sources */,
 				8D91ADF927A970CE00CDEA92 /* DetailViewController.swift in Sources */,

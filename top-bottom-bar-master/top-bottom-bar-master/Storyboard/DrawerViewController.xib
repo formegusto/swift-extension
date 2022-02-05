@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawerViewController" customModule="top_bottom_bar_master" customModuleProvider="target">
             <connections>
+                <outlet property="ATabs" destination="MaB-2Z-exH" id="jeq-ni-XfE"/>
                 <outlet property="bgView" destination="01O-56-kDH" id="8f1-DU-MOf"/>
                 <outlet property="drawerActive" destination="oVe-0t-ZLi" id="MDa-fD-o5b"/>
                 <outlet property="drawerInactive" destination="8ft-VA-4US" id="Nb1-3e-phl"/>
@@ -28,7 +30,74 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7o-Dg-q9x">
                     <rect key="frame" x="911" y="0.0" width="331" height="896"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc8-yT-gkU">
+                            <rect key="frame" x="16" y="48" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="O5U-RX-lAr"/>
+                                <constraint firstAttribute="width" constant="32" id="kkB-f7-Vee"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button">
+                                <imageReference key="image" image="multiply" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color systemColor="labelColor"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </state>
+                            <connections>
+                                <action selector="closeBtnAction:" destination="-1" eventType="touchUpInside" id="8aA-UE-IfK"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaB-2Z-exH">
+                            <rect key="frame" x="16" y="112" width="299" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnu-0g-X9h">
+                                    <rect key="frame" x="0.0" y="13.5" width="64.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Cnu-0g-X9h" firstAttribute="centerY" secondItem="MaB-2Z-exH" secondAttribute="centerY" id="MaX-z6-huX"/>
+                                <constraint firstItem="Cnu-0g-X9h" firstAttribute="leading" secondItem="MaB-2Z-exH" secondAttribute="leading" id="Qsf-7f-Cbg"/>
+                                <constraint firstAttribute="height" constant="48" id="f9O-bB-89R"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k53-Ug-JWc">
+                            <rect key="frame" x="16" y="160" width="299" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwt-cE-0gW">
+                                    <rect key="frame" x="0.0" y="13.5" width="65" height="21"/>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="hwt-cE-0gW" firstAttribute="leading" secondItem="k53-Ug-JWc" secondAttribute="leading" id="93V-Az-hAT"/>
+                                <constraint firstAttribute="height" constant="48" id="eVO-4i-wdQ"/>
+                                <constraint firstItem="hwt-cE-0gW" firstAttribute="centerY" secondItem="k53-Ug-JWc" secondAttribute="centerY" id="ibZ-5p-WqQ"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="s2g-qi-OKh"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="k53-Ug-JWc" secondAttribute="trailing" constant="16" id="KsR-Is-hWW"/>
+                        <constraint firstItem="MaB-2Z-exH" firstAttribute="leading" secondItem="O7o-Dg-q9x" secondAttribute="leading" constant="16" id="SSV-4M-XmZ"/>
+                        <constraint firstItem="Lc8-yT-gkU" firstAttribute="top" secondItem="O7o-Dg-q9x" secondAttribute="top" constant="48" id="UcZ-5i-ftY"/>
+                        <constraint firstAttribute="trailing" secondItem="MaB-2Z-exH" secondAttribute="trailing" constant="16" id="aFP-yb-t6M"/>
+                        <constraint firstItem="Lc8-yT-gkU" firstAttribute="leading" secondItem="O7o-Dg-q9x" secondAttribute="leading" constant="16" id="d9m-HW-5tB"/>
+                        <constraint firstItem="k53-Ug-JWc" firstAttribute="leading" secondItem="O7o-Dg-q9x" secondAttribute="leading" constant="16" id="dax-HR-bpe"/>
+                        <constraint firstItem="MaB-2Z-exH" firstAttribute="top" secondItem="Lc8-yT-gkU" secondAttribute="bottom" constant="32" id="e92-cM-ysF"/>
+                        <constraint firstItem="k53-Ug-JWc" firstAttribute="top" secondItem="MaB-2Z-exH" secondAttribute="bottom" id="xDd-8O-Iwx"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -48,12 +117,22 @@
                     <exclude reference="oVe-0t-ZLi"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="139" y="102"/>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
         </view>
     </objects>
     <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
