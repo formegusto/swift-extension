@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  carousel
 //
-//  Created by formegusto on 2022/01/28.
+//  Created by formegusto on 2022/02/08.
 //
 
 import UIKit
