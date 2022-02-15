@@ -19,6 +19,30 @@ class MainController: UIViewController {
         
         makeLeftItem()
         makeRightItem()
+        setLineHeight()
+        
+    }
+    
+    @IBAction func goCollection(_ sender: Any) {
+        let CollectionVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        
+//        self.navigationController?.present(CollectionVC, animated: true, completion: nil)
+        self.present(CollectionVC, animated: true, completion: nil)
+    }
+    
+    func setLineHeight() {
+        let style = NSMutableParagraphStyle()
+        let fontSize: CGFloat = 28
+        let lineHeight: CGFloat = fontSize * 1.6
+        
+        style.minimumLineHeight = lineHeight
+        style.maximumLineHeight = lineHeight
+        
+        noticeText.attributedText  = NSAttributedString(
+            string: "김크림님,\n설계사 자격증 시험까지\n6일 남았어요!", attributes: [.paragraphStyle: style]
+        )
+        noticeText.font = UIFont(name: "Helvetica Bold", size: fontSize)
+        noticeText.textColor = .white
     }
     
     func makeLeftItem() {
