@@ -24,10 +24,13 @@ class MainController: UIViewController {
     }
     
     @IBAction func goCollection(_ sender: Any) {
-        let CollectionVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+//        let CollectionVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        let CardVC = CardViewController(nibName: "CardViewController", bundle: nil)
         
 //        self.navigationController?.present(CollectionVC, animated: true, completion: nil)
-        self.present(CollectionVC, animated: true, completion: nil)
+//        self.present(CollectionVC, animated: true, completion: nil)
+        CardVC.modalPresentationStyle = .overFullScreen
+        self.present(CardVC, animated: true, completion: nil)
     }
     
     func setLineHeight() {

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="carousel" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="yQ5-WT-MAv" id="bhQ-WP-OeV"/>
+                <outlet property="collectionView2" destination="l3H-15-Cnc" id="in3-Z2-sCT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,12 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yQ5-WT-MAv">
-                    <rect key="frame" x="0.0" y="44" width="414" height="500"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="409"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="500" id="pK8-mx-bgV"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AOv-00-0G7">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="l3H-15-Cnc">
+                    <rect key="frame" x="0.0" y="453" width="414" height="409"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zZP-S7-kST">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -36,9 +44,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="l3H-15-Cnc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9JM-t5-Yh6"/>
                 <constraint firstItem="yQ5-WT-MAv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9a9-Oz-gzV"/>
+                <constraint firstItem="l3H-15-Cnc" firstAttribute="top" secondItem="yQ5-WT-MAv" secondAttribute="bottom" id="ASM-Dj-sxW"/>
                 <constraint firstItem="yQ5-WT-MAv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DTR-L1-spx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yQ5-WT-MAv" secondAttribute="trailing" id="P29-xY-ed3"/>
+                <constraint firstItem="yQ5-WT-MAv" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.5" id="UFl-K2-dEf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="l3H-15-Cnc" secondAttribute="bottom" id="ZDj-J0-Ze1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l3H-15-Cnc" secondAttribute="trailing" id="wI4-7Z-2lr"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </view>

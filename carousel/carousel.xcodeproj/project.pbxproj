@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D10F24327BE879E00A29560 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10F24127BE879E00A29560 /* CardViewController.swift */; };
+		8D10F24427BE879E00A29560 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D10F24227BE879E00A29560 /* CardViewController.xib */; };
+		8D10F24727BE87FC00A29560 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10F24527BE87FC00A29560 /* CardCollectionViewCell.swift */; };
 		8D85CC6C27B25C3800E0C7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85CC6B27B25C3800E0C7EB /* AppDelegate.swift */; };
 		8D85CC6E27B25C3800E0C7EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85CC6D27B25C3800E0C7EB /* SceneDelegate.swift */; };
 		8D85CC7027B25C3800E0C7EB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85CC6F27B25C3800E0C7EB /* MainController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D10F24127BE879E00A29560 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		8D10F24227BE879E00A29560 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		8D10F24527BE87FC00A29560 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D85CC6827B25C3800E0C7EB /* carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D85CC6B27B25C3800E0C7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D85CC6D27B25C3800E0C7EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8AF26527BBB2AE0023DC3C /* DetailCollectionViewCell.swift */,
+				8D10F24527BE87FC00A29560 /* CardCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 			children = (
 				8DE9402227BBB02900A13D0B /* DetailViewController.swift */,
 				8D85CC6F27B25C3800E0C7EB /* MainController.swift */,
+				8D10F24127BE879E00A29560 /* CardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 				8D85CC7627B25C3A00E0C7EB /* LaunchScreen.storyboard */,
 				8DE9402327BBB02900A13D0B /* DetailViewController.xib */,
 				8D8AF26627BBB2AE0023DC3C /* DetailCollectionViewCell.xib */,
+				8D10F24227BE879E00A29560 /* CardViewController.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 				8D85CC8527B25FD500E0C7EB /* let_logo_white.png in Resources */,
 				8D85CC7327B25C3800E0C7EB /* Main.storyboard in Resources */,
 				8D8AF26827BBB2AE0023DC3C /* DetailCollectionViewCell.xib in Resources */,
+				8D10F24427BE879E00A29560 /* CardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +216,9 @@
 			files = (
 				8D85CC7027B25C3800E0C7EB /* MainController.swift in Sources */,
 				8D85CC6C27B25C3800E0C7EB /* AppDelegate.swift in Sources */,
+				8D10F24327BE879E00A29560 /* CardViewController.swift in Sources */,
 				8D85CC6E27B25C3800E0C7EB /* SceneDelegate.swift in Sources */,
+				8D10F24727BE87FC00A29560 /* CardCollectionViewCell.swift in Sources */,
 				8D8AF26727BBB2AE0023DC3C /* DetailCollectionViewCell.swift in Sources */,
 				8DE9402427BBB02900A13D0B /* DetailViewController.swift in Sources */,
 			);

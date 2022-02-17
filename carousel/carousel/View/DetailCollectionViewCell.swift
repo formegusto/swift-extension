@@ -9,11 +9,12 @@ import UIKit
 
 class DetailCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
+    var number: Int = 0
+    @IBOutlet weak var textLabel: UILabel!
+    
+    func loadCell() {
         self.backgroundColor = .gray
+        textLabel.text = number.description
     }
 
 }

@@ -10,14 +10,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DetailCollectionViewCell" reuseIdentifier="DetailCollectionViewCell" id="gTV-IL-0wX" customClass="DetailCollectionViewCell" customModule="carousel" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="199" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="199" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfX-nn-n5p">
+                        <rect key="frame" x="78.5" y="39.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="139" y="139"/>
+            <constraints>
+                <constraint firstItem="YfX-nn-n5p" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="0p5-a3-yGR"/>
+                <constraint firstItem="YfX-nn-n5p" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ivF-1p-4Z0"/>
+            </constraints>
+            <size key="customSize" width="199" height="100"/>
+            <connections>
+                <outlet property="textLabel" destination="YfX-nn-n5p" id="onV-4G-j9d"/>
+            </connections>
+            <point key="canvasLocation" x="245.6521739130435" y="155.35714285714286"/>
         </collectionViewCell>
     </objects>
 </document>
